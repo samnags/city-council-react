@@ -7,18 +7,37 @@ import { fetchMembers, selectMember } from '../actions/index'
 
 
 
-class Table extends Component {    
+class Table extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = { selectedRowId: 0 }
+    }
+
     componentDidMount() {
         this.props.fetchMembers()
     }
 
     handleClick(member) {        
-        this.props.selectMember(member)
+        this.props.selectMember(member)        
+        this.setState({selectedRowId: member.id})
     }
+
+    // isActive() {        
+    //     debugger
+    //     // this.props.activeMember.key === member.key ? 'active' : null 
+    // }
+
+    // {this.state.active ? 'active' : null}
+    // {this.key === member.district ? 'active' : null}
     
-    renderMembers = (member) => {        
-        return (
-            <tr 
+    renderMembers = (member) => {                
+        const activeMember = this.props.activeMember ? this.props.activeMember.key : 1 
+        return (            
+            <tr   
+                // style={member.id === this.state.selectedRowId ? 'background-color: #F00' : ''}              
+                // style={{backgroundColor: this.state.bgColor}}              
+                className={member.id === this.state.selectedRowId ? 'active' : ''}
                 key={member.district}
                 onClick={() => this.handleClick(member)}>
             <td>
@@ -56,9 +75,10 @@ class Table extends Component {
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state) {    
     return {
-        members: state.members
+        members: state.members,
+        activeMember: state.activeMember
     }    
 }
 
