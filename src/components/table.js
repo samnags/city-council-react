@@ -7,20 +7,36 @@ import { fetchMembers, selectMember } from '../actions/index'
 
 
 
-class Table extends Component {    
+class Table extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            activeMember: null
+        }
+    }    
     componentDidMount() {
         this.props.fetchMembers()
     }
 
     handleClick(member) {        
-        this.props.selectMember(member)
+        this.setState({
+            activeMember: member
+        })
+        this.props.selectMember(member)        
     }
+
+    // determineClass(member) {
+    //     if(this.state.activeMember)     
+    // }
     
     renderMembers = (member) => {        
         return (
             <tr 
                 key={member.district}
-                onClick={() => this.handleClick(member)}>
+                onClick={() => this.handleClick(member)}
+                className={this.state.activeMember && this.state.activeMember.id === member.id ? 'activeMember' : null }
+            >
             <td>
                 {member.first_name}
             </td>
@@ -35,11 +51,11 @@ class Table extends Component {
     }
      
     render() {        
-        const { members } = this.props
+        const { members } = this.props        
         return (
             <div>
                 <h1>Select Your Council Member</h1>                
-                    <BS.Table condensed bordered hover responsive>
+                    <BS.Table condensed bordered responsive>
                         <thead>
                             <tr>                            
                                 <th>First Name</th>
@@ -58,7 +74,8 @@ class Table extends Component {
 
 function mapStateToProps(state) {
     return {
-        members: state.members
+        members: state.members,
+        activeMember: state.activeMember
     }    
 }
 

@@ -23,8 +23,8 @@
   to { transform: rotate(360deg); }
 }
 
-.active {
-  background-color: red
+.activeMember {
+  background-color: red;
 }
 
 .member {
