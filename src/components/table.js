@@ -26,16 +26,16 @@ class Table extends Component {
         this.props.selectMember(member)        
     }
 
-    // determineClass(member) {
-    //     if(this.state.activeMember)     
-    // }
+    determineClass(member) {
+        return this.state.activeMember && this.state.activeMember.id === member.id ? 'activeMember' : null 
+    }
     
     renderMembers = (member) => {        
         return (
             <tr 
                 key={member.district}
                 onClick={() => this.handleClick(member)}
-                className={this.state.activeMember && this.state.activeMember.id === member.id ? 'activeMember' : null }
+                className={this.determineClass(member)}
             >
             <td>
                 {member.first_name}
