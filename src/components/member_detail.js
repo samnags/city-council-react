@@ -13,8 +13,7 @@ const MemberDetail = (props) => {
         let date = new Date(attendance.meeting.date).toDateString()
           return (
             { 
-                Date: date,
-                'In Session?': attendance.in_session_format,
+                Date: date,                
                 'Attended?': attendance.attended_format            
             }
           )

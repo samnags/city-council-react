@@ -5,13 +5,28 @@ const MemberSummary = (props) => {
     return (                        
         <div>
             <div>
-                Name: {`${member.first_name} ${member.last_name}`} <br />
-                District: {member.district} <br />
-                Party: {member.party} <br />
+                <h4>Name: {`${member.first_name} ${member.last_name}`}</h4>
+                <h4>District: {member.district}</h4>
+                <h4>Party: {member.party}</h4>
             </div>
-                <h4>Number of meetings missed:   <span>{member.missed}</span></h4>
-                <h4>Number of meetings attended: <span>{member.meetings_attended_count}</span></h4>
-                <h4>Total number of meetings:    <span>{member.should_have_attended_count}</span></h4>
+            <div className={'meetingsummary'}>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Number of meetings missed:</td>
+                            <td>{member.missed}</td>
+                        </tr>
+                        <tr>
+                            <td>Number of meetings attended:</td>
+                            <td>{member.meetings_attended_count}</td>
+                        </tr>
+                        <tr>
+                            <td>Total number of meetings:</td>
+                            <td>{member.should_have_attended_count}</td>
+                        </tr>
+                    </tbody>
+                </table>                            
+            </div>
         </div>
         );
 }

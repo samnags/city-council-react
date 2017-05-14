@@ -1,4 +1,35 @@
-.App {
+
+
+/**/
+.meetingsummary {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.meetingsummary table {
+  font-size: 18px;
+  border-collapse: separate
+}
+
+.meetingsummary td {
+    padding-right: 50px
+}
+
+
+.activeMember {
+  background-color: red;
+}
+
+.member {
+  margin-top: 7%;
+}
+
+/*span {
+  padding-left: 20%;
+}*/
+
+
+/*.App {
   text-align: center;
 }
 
@@ -21,16 +52,4 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-.activeMember {
-  background-color: red;
-}
-
-.member {
-  margin-top: 10%;
-}
-
-span {
-  padding-left: 10%;
-}
+}*/
