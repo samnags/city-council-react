@@ -29,6 +29,7 @@ class Table extends Component {
     }
 
     determineClass(member) {
+        debugger
         return this.state.activeMember && this.state.activeMember.id === member.id ? 'activeMember' : null 
     }
     
@@ -87,7 +88,8 @@ class Table extends Component {
                 defaultPageSize={14}                
                 getTdProps={(state, rowInfo, column, instance) => {
                     return {
-                        onClick: e => { this.handleClick(rowInfo.original)}                        
+                        onClick: e => { this.handleClick(rowInfo.original)},
+                        className: this.state.activeMember && this.state.activeMember.id === rowInfo.original.id ? 'activeMember' : null                        
                         }
                     }
                 }
