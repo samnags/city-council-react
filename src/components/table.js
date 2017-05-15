@@ -31,30 +31,7 @@ class Table extends Component {
     determineClass(member) {
         debugger
         return this.state.activeMember && this.state.activeMember.id === member.id ? 'activeMember' : null 
-    }
-    
-    // renderMembers = (member) => {        
-    //     return (
-    //         <tr 
-    //             key={member.district}
-    //             onClick={() => this.handleClick(member)}
-    //             className={this.determineClass(member)}
-    //         >
-    //         <td>
-    //             {member.first_name}
-    //         </td>
-    //         <td>
-    //             {member.last_name}
-    //         </td>
-    //         <td>
-    //             {member.district}
-    //         </td>      
-    //         <td>
-    //             {member.rank}
-    //         </td>      
-    //         </tr>
-    //     )
-    // }
+    }    
      
     render() {        
         const { members } = this.props        
@@ -74,7 +51,7 @@ class Table extends Component {
         },
         {
             Header: 'Ranking',
-            accessor: 'rank'
+            accessor: 'rank_format'
         }
         ]
         return (
