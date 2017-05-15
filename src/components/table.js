@@ -46,6 +46,9 @@ class Table extends Component {
             <td>
                 {member.district}
             </td>      
+            <td>
+                {member.rank}
+            </td>      
             </tr>
         )
     }
@@ -61,6 +64,7 @@ class Table extends Component {
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>District</th>
+                                <th>Ranking</th>
                             </tr>                    
                         </thead>
                         <tbody>
