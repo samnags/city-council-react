@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 // import { bindActionCreators } from 'redux'
-import * as BS from 'react-bootstrap';
+// import * as BS from 'react-bootstrap';
 // import TableRow from './table_row'
 import { fetchMembers, selectMember } from '../actions/index'
 import ReactTable from 'react-table'
@@ -57,7 +57,7 @@ class Table extends Component {
         return (
             <div>
                 <h1>Select Your Council Member</h1>                
-                <ReactTable
+                <ReactTable                
                 columns={columns}
                 data={data}
                 showPagination={false}
@@ -70,6 +70,16 @@ class Table extends Component {
                         }
                     }
                 }
+                defaultSortMethod={(a,b) => {                    
+                    if(typeof(a) === "string") {
+                        let newA = parseFloat(a.replace( /%/, "" ));
+                        let newB = parseFloat(b.replace( /%/, "" ));
+                        return ((newA < newB) ? 1 : ((newA > newB) ? -1 : 0));
+                    } else {
+                        return ((a < b) ? 1 : ((a > b) ? -1 : 0));   
+                    }
+                     
+                }}
                 />
             </div>
         )
