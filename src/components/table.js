@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import * as BS from 'react-bootstrap';
 // import TableRow from './table_row'
 import { fetchMembers, selectMember } from '../actions/index'
+import ReactTable from 'react-table'
+import 'react-table/react-table.css'
 
 
 
@@ -30,47 +32,66 @@ class Table extends Component {
         return this.state.activeMember && this.state.activeMember.id === member.id ? 'activeMember' : null 
     }
     
-    renderMembers = (member) => {        
-        return (
-            <tr 
-                key={member.district}
-                onClick={() => this.handleClick(member)}
-                className={this.determineClass(member)}
-            >
-            <td>
-                {member.first_name}
-            </td>
-            <td>
-                {member.last_name}
-            </td>
-            <td>
-                {member.district}
-            </td>      
-            <td>
-                {member.rank}
-            </td>      
-            </tr>
-        )
-    }
+    // renderMembers = (member) => {        
+    //     return (
+    //         <tr 
+    //             key={member.district}
+    //             onClick={() => this.handleClick(member)}
+    //             className={this.determineClass(member)}
+    //         >
+    //         <td>
+    //             {member.first_name}
+    //         </td>
+    //         <td>
+    //             {member.last_name}
+    //         </td>
+    //         <td>
+    //             {member.district}
+    //         </td>      
+    //         <td>
+    //             {member.rank}
+    //         </td>      
+    //         </tr>
+    //     )
+    // }
      
     render() {        
         const { members } = this.props        
+        const data = members
+        const columns = [
+        {
+            Header: 'First Name',
+            accessor: 'first_name'
+        },
+        {
+            Header: 'Last Name',
+            accessor: 'last_name'
+        },
+        {
+            Header: 'District',
+            accessor: 'district'
+        },
+        {
+            Header: 'Ranking',
+            accessor: 'rank'
+        }
+        ]
         return (
             <div>
                 <h1>Select Your Council Member</h1>                
-                    <BS.Table condensed bordered responsive>
-                        <thead>
-                            <tr>                            
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>District</th>
-                                <th>Ranking</th>
-                            </tr>                    
-                        </thead>
-                        <tbody>
-                            {members.map(this.renderMembers)}                                       
-                        </tbody>
-                    </BS.Table>
+                <ReactTable
+                columns={columns}
+                data={data}
+                showPagination={false}
+                sortable={true}
+                defaultPageSize={14}                
+                getTdProps={(state, rowInfo, column, instance) => {
+                    return {
+                        onClick: e => { this.handleClick(rowInfo.original)}                        
+                        }
+                    }
+                }
+                />
             </div>
         )
     }
@@ -88,3 +109,17 @@ function mapStateToProps(state) {
 // }
 
 export default connect(mapStateToProps, { fetchMembers, selectMember })(Table);
+
+// <BS.Table condensed bordered responsive>
+//                         <thead>
+//                             <tr>                            
+//                                 <th>First Name</th>
+//                                 <th>Last Name</th>
+//                                 <th>District</th>
+//                                 <th>Ranking</th>
+//                             </tr>                    
+//                         </thead>
+//                         <tbody>
+//                             {members.map(this.renderMembers)}                                       
+//                         </tbody>
+//                     </BS.Table>
