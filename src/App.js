@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import './App.css';
+// import './App.css';
 import Table from './components/table';
 import Member from './components/member';
 import * as BS from 'react-bootstrap';

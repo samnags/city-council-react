@@ -27,7 +27,7 @@ const MemberDetail = (props) => {
 
     
     return (
-        <div>
+        <div className='meetingdetails'>
             <h3>By Meeting Date</h3>
             <ReactTable            
                 columns={columns}                
