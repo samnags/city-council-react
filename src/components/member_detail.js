@@ -36,6 +36,10 @@ const MemberDetail = (props) => {
                 defaultPageSize={10}
                 showPagination={true}
                 showPageSizeOptions={false}
+                defaultSorted={[{ 
+                        id: 'date', 
+                        asc: true}
+                    ]}                
                 defaultSortMethod={(a,b) => {                                            
                     // if(typeof(a) === "string" && a.endsWith('%')) {                        
                         let newA = new Date(a)
