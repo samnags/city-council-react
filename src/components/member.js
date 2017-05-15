@@ -8,7 +8,7 @@ class Member extends Component {
         const { member } = this.props
                 
         if(!member) {
-            return <div>Select a member</div>
+            return <div></div>
         }
 
         return (
