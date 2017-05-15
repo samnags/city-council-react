@@ -11,16 +11,16 @@ class App extends Component {
     
     return (
       <div>
-        <BS.Col 
-        lg={4}        
-        >
-          <Table members={this.props.members}
-          />
-        </BS.Col>
+        <BS.Row>
+          <BS.Col 
+          lg={4}        
+          >
+            <Table members={this.props.members}
+            />
+          </BS.Col>
 
-        <BS.Col lg={4} lgOffset={2} className="member">
-          <Member/>
-        </BS.Col>
+            <Member/>
+        </BS.Row>
       </div>
     );
   }
@@ -33,3 +33,7 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(App);
+
+// <BS.Col lg={4} lgOffset={2} className="member">
+            // <Member/>
+          // </BS.Col>

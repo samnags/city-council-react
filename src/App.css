@@ -17,28 +17,31 @@
   height: 100vh;
 } 
     */
-#root {
+html body {
+  height: 100%;
+  background-size: cover;
   background: #4CA1AF;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: cover;
-  /*height: 100vh;*/
+  
 }
 
-
-
 .meetingsummary {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  /*padding-top: 5%;
+  padding-bottom: 5%;*/
+  /*font-size: 18px ;*/
 }
 
 .meetingsummary table {
+  padding-top: 20px;
   font-size: 18px;
   border-collapse: separate
 }
 
 .meetingsummary td {
-    padding-right: 50px
+    padding-top: 5px;    
+    padding-right: 50px;
+    font-size: 18px;
 }
 
 

@@ -9,19 +9,19 @@ const MemberSummary = (props) => {
                 <h4>District: {member.district}</h4>
                 <h4>Party: {member.party}</h4>
             </div>
-            <div className={'meetingsummary'}>
+            <div className='meetingsummary'>
                 <table>
                     <tbody>
                         <tr>
-                            <td>Number of meetings missed:</td>
+                            <td>Meetings missed:</td>
                             <td>{member.missed}</td>
                         </tr>
                         <tr>
-                            <td>Number of meetings attended:</td>
+                            <td>Meetings attended:</td>
                             <td>{member.meetings_attended_count}</td>
                         </tr>
                         <tr>
-                            <td>Total number of meetings:</td>
+                            <td>Should Have Attended:</td>
                             <td>{member.should_have_attended_count}</td>
                         </tr>
                     </tbody>

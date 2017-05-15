@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import MemberSummary from './member_summary'
 import MemberDetail from './member_detail'
+import * as BS from 'react-bootstrap'
 
 class Member extends Component { 
     render() {
@@ -12,9 +13,13 @@ class Member extends Component {
         }
 
         return (
-            <div>
-                <MemberSummary member={member}/>   
-                <MemberDetail attendances={member.attendances}/>
+            <div className="member">
+                <BS.Col lg={3}>
+                    <MemberSummary member={member}/>   
+                </BS.Col>
+                <BS.Col lg={4}>
+                    <MemberDetail attendances={member.attendances}/>
+                </BS.Col>                                
             </div>         
         )
     }
