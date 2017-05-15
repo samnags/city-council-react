@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <BS.Row>
           <BS.Col 
-          lg={4}        
+            lg={4}            
           >
             <Table members={this.props.members}
             />
