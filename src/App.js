@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-// import './App.css';
+import './App.css';
 import Table from './components/table';
 import Member from './components/member';
 import * as BS from 'react-bootstrap';
@@ -9,19 +9,16 @@ class App extends Component {
 
   render() {
     
-    return (
-      <div>
-        <BS.Row>
+    return (      
+        <BS.Row className='app-container'>
           <BS.Col 
             lg={4}            
           >
             <Table members={this.props.members}
             />
           </BS.Col>
-
             <Member/>
-        </BS.Row>
-      </div>
+        </BS.Row>      
     );
   }
 }

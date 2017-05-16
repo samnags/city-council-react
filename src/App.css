@@ -1,19 +1,35 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Khula', sans-serif;
+  font-family: 'Oswald', sans-serif;
   text-rendering: optimizeLegibility;
   font-size: 15px;
 }
 
+body html {
+  height: 100%;
+}
 
-html body {
+/*.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}*/
+
+.app-container {
+  height: 95vh;  
+  background-image: url('./images/cityhallprotesters3.jpg');  
+  background-size: cover;
+  background-position: center;
+  /*position: fixed;*/
+}
+/*html body {
   height: 100%;
   background-size: cover;
-  background: #4CA1AF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+  background-image: './images/cityhallprotesters_color.jpg'*/
+  /*background: #4CA1AF;   fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #C4E0E5, #4CA1AF);   Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to right, #C4E0E5, #4CA1AF);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/*}*/
 
 body h1, h2, h3, h4, h5 {
   padding: 0;
@@ -56,6 +72,30 @@ body h1, h2, h3, h4, h5 {
 
 .member {
   margin-top: 7%;
+}
+
+/* -----------------------------  */
+/* ABOUT */
+/* -----------------------------  */
+
+/*.about {
+  height: 30vh;
+}*/
+
+/* -----------------------------  */
+/* FOOTER */
+/* -----------------------------  */
+
+
+.footer {
+  background: #232526;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(#414345, #232526);
+background: -moz-linear-gradient(#414345, #232526);
+background: -o-linear-gradient(#414345, #232526);
+background: linear-gradient(#414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 5vh; 
+  /*position: relative;  */
+  /*padding-top: 2%  */
 }
 
 /* -----------------------------  */
