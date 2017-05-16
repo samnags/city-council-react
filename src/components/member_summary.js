@@ -3,7 +3,7 @@ import React from 'react';
 const MemberSummary = (props) => {    
     const { member } = props      
     return (                        
-        <div>
+        <div className='member-info'>
             <div className='membersummary'>
                 <h4>Name: {`${member.first_name} ${member.last_name}`}</h4>
                 <h4>District: {member.district}</h4>

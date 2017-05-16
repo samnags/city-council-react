@@ -40,9 +40,24 @@ body h1, h2, h3, h4, h5 {
   padding-top: 10%;
 }
 
+.header h1 {
+  text-transform: uppercase
+}
+
+.member-info {
+  background:  rgba(255,255,255, 0.5);  
+}
+
+.membertable { 
+  background:  rgba(255,255,255, 0.5);  
+}
+
+.meetingdetails {
+  background:  rgba(255,255,255, 0.5);  
+}
 
 .membersummary h4 {
-  padding-top: 2%;
+  padding-top: 2%;  
   /*padding-bottom: 5%;*/
   /*font-size: 18px ;*/
 }

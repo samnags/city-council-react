@@ -12,7 +12,7 @@ class App extends Component {
     return (      
         <BS.Row className='app-container'>
           <BS.Col 
-            lg={4}            
+            lg={5}            
           >
             <Table members={this.props.members}
             />

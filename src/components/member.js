@@ -17,7 +17,7 @@ class Member extends Component {
                 <BS.Col lg={3}>
                     <MemberSummary member={member}/>   
                 </BS.Col>
-                <BS.Col lg={4}>
+                <BS.Col lg={3}>
                     <MemberDetail attendances={member.attendances}/>
                 </BS.Col>                                
             </div>         
