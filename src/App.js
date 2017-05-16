@@ -10,15 +10,20 @@ class App extends Component {
   render() {
     
     return (      
-        <BS.Row className='app-container'>
-          <BS.Col 
-            lg={5}            
-          >
-            <Table members={this.props.members}
-            />
-          </BS.Col>
-            <Member/>
-        </BS.Row>      
+        <div className='app-container'>
+          <div className='header'>
+              <h1>Select Your Council Member</h1>                
+          </div>
+          <BS.Row>
+            <BS.Col 
+              lg={4}            
+            >
+              <Table members={this.props.members}
+              />
+            </BS.Col>
+              <Member/>
+          </BS.Row>      
+        </div>
     );
   }
 }

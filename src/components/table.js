@@ -54,11 +54,7 @@ class Table extends Component {
         },        
         ]
         return (
-            <div>
-                <div className='header'>
-                    <h1>Select Your Council Member</h1>                
-                </div>
-                
+            <div>                                
                 <div className='membertable'>
                     <ReactTable                
                     columns={columns}

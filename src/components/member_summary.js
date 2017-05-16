@@ -5,7 +5,7 @@ const MemberSummary = (props) => {
     return (                        
         <div className='member-info'>
             <div className='membersummary'>
-                <h4>Name: {`${member.first_name} ${member.last_name}`}</h4>
+                <h4 className='name'>{`${member.first_name} ${member.last_name}`}</h4>
                 <h4>District: {member.district}</h4>
                 <h4>Party: {member.party}</h4>
             </div>

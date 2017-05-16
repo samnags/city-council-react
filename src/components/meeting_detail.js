@@ -27,9 +27,9 @@ const MemberDetail = (props) => {
 
     
     return (
-        <div>
-            <h3>By Meeting Date</h3>
-            <div className='meetingdetails'>            
+        <div className='meeting-detail'>            
+            <div className='meeting-detail-table'>            
+                <h3>By Meeting Date</h3>
                 <ReactTable            
                     columns={columns}                
                     data={data}  

@@ -36,34 +36,41 @@ body h1, h2, h3, h4, h5 {
   margin: 0
 }
 
-.header {
-  padding-top: 10%;
+.header {  
+  padding-top: 2%;
 }
 
 .header h1 {
-  text-transform: uppercase
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
+.activeMember {
+  background-color: #D64541;
+}
+
+/* -----------------------------  */
+/* MIDDLE COLUMN */
+/* -----------------------------  */
+
 .member-info {
-  background:  rgba(255,255,255, 0.5);  
+  padding-left: 5%;
+  padding-right: 5%;
+  background:  rgba(255,255,255, 0.7);  
 }
 
 .membertable { 
-  background:  rgba(255,255,255, 0.5);  
+  background:  rgba(255,255,255, 0.7);  
 }
 
-.meetingdetails {
-  background:  rgba(255,255,255, 0.5);  
+.meeting-detail-table {
+  
 }
 
 .membersummary h4 {
   padding-top: 2%;  
   /*padding-bottom: 5%;*/
   /*font-size: 18px ;*/
-}
-
-.meetingdetails h3 {
-  padding-bottom: 2%;
 }
 
 .meetingsummary table {
@@ -81,13 +88,31 @@ body h1, h2, h3, h4, h5 {
 }
 
 
-.activeMember {
-  background-color: #D64541;
+/* -----------------------------  */
+/* THIRD COLUMN */
+/* -----------------------------  */
+
+.name {
+  font-size: 200%;
+  padding-bottom: 4%;
 }
 
-.member {
-  margin-top: 7%;
+.meeting-detail {
+  background:  rgba(255,255,255, 0.7);  
+  padding-left: 5%;
+  padding-right: 5%;
 }
+
+.meeting-detail-table h3 {
+  padding-bottom: 5%;
+  padding-top: 2%;
+}
+
+
+
+
+
+
 
 /* -----------------------------  */
 /* ABOUT */
